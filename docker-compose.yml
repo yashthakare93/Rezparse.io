@@ -51,6 +51,10 @@ services:
   server-node:
     build: ./server-node
     env_file: .env
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./server-node/src:/app/src
     depends_on:
       mongo:
         condition: service_healthy
@@ -61,6 +65,8 @@ services:
   server-spring:
     build: ./server-spring
     env_file: .env
+    ports:
+      - "8080:8080"
     depends_on:
       postgres:
         condition: service_healthy
@@ -68,6 +74,8 @@ services:
 
   client:
     build: ./client
+    ports:
+      - "5173:5173"
     networks: [rezparse-net]
 
   nginx:
