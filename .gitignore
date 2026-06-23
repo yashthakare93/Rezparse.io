@@ -1,0 +1,46 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# doc
+doc/
+
+# node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# react/vite build
+client/dist/
+client/.vite/
+
+# java/spring boot
+server-spring/target/
+server-spring/.mvn/
+*.jar
+*.class
+*.war
+
+# gradle 
+.gradle/
+build/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# logs
+logs/
+*.log
+
+# docker override 
+docker-compose.override.yml
